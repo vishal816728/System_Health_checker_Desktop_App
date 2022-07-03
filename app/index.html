@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sys Health Checker</title>
+  </head>
+  <body>
+    <main>
+    <div class="content show">
+      <h1>CPU</h1>
+        <!-- <div class="progress-bar"> -->
+          <progress min="0" max="100" value="23" id="progress-bar"></progress>
+        <!-- </div> -->
+        <ul>
+          <li><strong>Cpu Usage: &nbsp;</strong><span id="cpu-usage""></span></li>
+          <li><strong>Cpu Free: &nbsp;</strong><span id="cpu-free"></span></li>
+        </ul>
+        <div id="cpu-model">
+           
+        </div>
+    </div>
+     <div class="content">
+      <h1>System Info</h1>
+      <ul>
+        <li><strong>Computer Name: &nbsp;</strong><span id="comp-name"></span></li>
+        <li><strong>Os: &nbsp;</strong><span id="os"></span></li>
+        <li><strong>System Uptime: &nbsp;<span id="sys-uptime"></span><small>&nbsp;Seconds</small></strong></li>
+        <li><strong>System Memory: &nbsp;</strong><span id="mem-total"></span></li>
+      </ul>
+     </div>
+     <div class="content">
+       <h1>Settings</h1>
+       <div id="alert" class="hide">
+
+       </div>
+       <form id="settings-form">
+         <h1 id="setting saved"></h1>
+             <div class="form-control">
+               <label for="cpu-overload">Cpu overload Warning %</label>
+               <input type="number" name="" id="cpu-overload" />
+             </div>
+            <input type="submit" value="Save" class="btn">
+            </form>
+     </div>
+    </main>
+
+    <nav id="nav">
+      <ul>
+        <li>
+          <p>CPU</p>
+        </li>
+        <li>
+          <p>System Info</p>
+        </li>
+        <li>
+          <p>Settings</p>
+        </li>
+      </ul>
+    </nav>
+    <script src="js/tabs.js"></script>
+    <script src="js/sysInfo.js"></script>
+  </body>
+</html>
